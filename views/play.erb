@@ -3,15 +3,15 @@
       <div style="width: 95%;overflow:auto;">
         <div style="float:left;">
             <img src="http://cdn.images.dailystar.co.uk/dynamic/205/photos/433000/620x/591726b2a5e34_JeremyCorbynDog.jpg" width="500">
-            <figcaption> <%= @player1 %> </figcaption>
+            <figcaption> <%= @game.player1.name %> </figcaption>
             <br></br>
-            <figcaption> Votes: <%= @player1_votes %> </figcaption>
+            <figcaption> Votes: <%= @game.player1.votes%> </figcaption>
         </div>
         <div style="float:right;">
             <img src="http://i.dailymail.co.uk/i/pix/2017/02/15/21/3D41404B00000578-0-image-a-15_1487194464832.jpg" width="560">
-            <figcaption> <%= @player2 %> </figcaption>
+            <figcaption> <%= @game.player2.name %> </figcaption>
             <br></br>
-            <figcaption> Votes: <%= @player2_votes %> </figcaption>
+            <figcaption> Votes: <%= @game.player2.votes %> </figcaption>
             <form action='/attack1'>
                <input type="submit" value="High five!">
              </form>

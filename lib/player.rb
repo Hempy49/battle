@@ -1,13 +1,8 @@
 class Player
 
-  attr_reader :name, :votes
+  attr_reader :name
 
-  def initialize(name, votes = 100)
+  def initialize(name)
     @name = name
-    @votes = votes
-  end
-
-  def reduce_votes
-    @votes -= 10
   end
 end

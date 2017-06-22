@@ -22,10 +22,10 @@ describe "play.erb" do
     end
   end
 
-  feature 'Reducing player 1 votes' do
-    scenario 'Player 2 reduces player 1 votes' do
-    attack_player_1
-      expect(page).to have_content("Votes: 90")
-    end
-  end
+  # feature 'Reducing player 1 votes' do
+  #   scenario 'Player 2 reduces player 1 votes' do
+  #   attack_player_1
+  #     expect(page).to have_content("Votes: 90")
+  #   end
+  # end
 end

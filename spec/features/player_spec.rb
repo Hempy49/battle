@@ -6,7 +6,7 @@ describe Player do
 
   describe "#initialize" do
     it "is initialised with 100 votes" do
-      expect(player.votes).to eq 100
+      expect(player.votes).to eq 20
     end
   end
 
@@ -17,7 +17,7 @@ describe Player do
   describe "#reduce_votes" do
     it "reduces the votes by 10" do
       player.reduce_votes
-      expect(player.votes).to eq 90
+      expect(player.votes).to eq 10
     end
   end
 end

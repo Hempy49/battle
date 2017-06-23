@@ -11,7 +11,7 @@ end
 let(:player2) do
   player2 = double(:player2)
   allow(player2).to receive(:name) { 'Player 2' }
-  allow(player2).to receive(:reduce_votes) { 90 }
+  allow(player2).to receive(:reduce_votes) { 10 }
   player2
 end
 
@@ -26,7 +26,7 @@ end
   feature 'Hit points' do
     scenario 'Viewing players hit points' do
       sign_in_and_play
-      expect(page).to have_content("Votes: 100")
+      expect(page).to have_content("Votes: 20")
     end
   end
 
@@ -47,7 +47,7 @@ end
   feature 'Reducing player 1 votes' do
     scenario 'Player 2 reduces player 1 votes' do
     attack_player_1
-      expect(page).to have_content("Votes: 90")
+      expect(page).to have_content("Votes: 10")
     end
   end
 end

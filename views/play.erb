@@ -13,7 +13,11 @@
             <br></br>
             <figcaption> Votes: <%= @game.player2.votes %> </figcaption>
             <form action='/attack1'>
+              <% if @game.player1.votes >= 10 && @game.player2.votes >= 10 %>
                <input type="submit" value="High five!">
+              <% elsif @game.player1.votes == 0 %> <%= @game.player2.name %> has won!
+              <% elsif @game.player2.votes == 0 %> <%= @game.player1.name %> has won!
+                <% end %>
              </form>
         </div>
       </div>

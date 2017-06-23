@@ -7,3 +7,8 @@ describe "index.erb" do
     end
   end
 end
+
+
+def the_end
+space
+end

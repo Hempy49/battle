@@ -2,21 +2,21 @@ require "./lib/player.rb"
 
 class Game
 
-attr_reader :votes
+attr_reader :votes, :player1_turn, :player1, :player2
 
   def initialize(player1, player2)
-    @players = [player1, player2]
+    @player1 = player1
+    @player2 = player2
+    @player1_turn = false
   end
 
-  def player1
-    @players.first
+  def attack
+    switch_player
+    return @player2.reduce_votes if @player1_turn == true
+    @player1.reduce_votes if @player1_turn == false
   end
 
-  def player2
-    @players.last
-  end
-
-  def attack(player)
-    player.reduce_votes
+  def switch_player
+    @player1_turn = !@player1_turn
   end
 end

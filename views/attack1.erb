@@ -2,36 +2,42 @@
   <img src="https://media.giphy.com/media/hTcWHo0J3W5tC/giphy.gif" width="800">
   <br></br>
   <br></br>
-  <figcaption> <%= @game.player1.name %> misses a high five! </figcaption>
+  <figcaption>
+    <% if @game.player1_turn %>
+      <%= @game.player2.name %> misses a high five!
+    <% else %>
+      <%= @game.player1.name %> misses a high five!
+    <% end %>
+  </figcaption>
   <br></br>
   <br></br>
   <br></br>
   <figcaption>
     <form action='/play' method="get">
-       <input type="submit" value="Continue!">
-     </form>
-  <figcaption>
-</div>
+      <input type="submit" value="Continue!">
+    </form>
+    <figcaption>
+    </div>
 
-<style>
-figcaption {
-  text-align: center;
-  font-size: 75px;
-}
+    <style>
+    figcaption {
+      text-align: center;
+      font-size: 75px;
+    }
 
-input[type=submit] {
-    width: 50%;
-    align: center;
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
+    input[type=submit] {
+      width: 50%;
+      align: center;
+      background-color: #4CAF50;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
 
-input[type=submit]:hover {
-    background-color: #45a049;
-}
-</style>
+    input[type=submit]:hover {
+      background-color: #45a049;
+    }
+    </style>

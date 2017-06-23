@@ -10,6 +10,14 @@ attr_reader :votes, :player1_turn, :player1, :player2
     @player1_turn = false
   end
 
+  def self.create_new_game(player1, player2)
+    @game = Game.new(player1, player2)
+  end
+
+  def self.game_instance
+    @game
+  end
+
   def attack
     switch_player
     return @player2.reduce_votes if player1_can_attack?

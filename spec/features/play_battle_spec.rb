@@ -50,4 +50,18 @@ end
       expect(page).to have_content("Votes: 10")
     end
   end
+
+ feature 'Showing winning message' do
+   scenario 'Player 1 gets message that he won' do
+     attack_to_zero
+     expect(page).to have_content("#{player1.name} has won!")
+   end
+
+   scenario 'High five button hidden' do
+     attack_to_zero
+     expect(page).not_to have_content("High five!")
+   end
+ end
+
+
 end

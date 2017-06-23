@@ -17,3 +17,11 @@ def attack_next_player
   click_button "Continue!"
   click_button "High five!"
 end
+
+def attack_to_zero
+  sign_in_and_play
+  3.times do
+    click_button "High five!"
+    click_button "Continue!"
+  end
+end

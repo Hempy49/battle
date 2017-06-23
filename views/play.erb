@@ -12,11 +12,13 @@
             <figcaption> <%= @game.player2.name %> </figcaption>
             <br></br>
             <figcaption> Votes: <%= @game.player2.votes %> </figcaption>
-            <form action='/attack1'>
+        </div>
+          <div id="text_bottom">
+              <form action='/attack1'>
               <% if @game.player1.votes >= 10 && @game.player2.votes >= 10 %>
                  <input type="submit" value="High five!">
-              <% elsif @game.player1.votes == 0 %> <%= @game.player2.name %> has won!
-              <% elsif @game.player2.votes == 0 %> <%= @game.player1.name %> has won!
+              <% elsif @game.player1.votes == 0 %> <figcaption><%= @game.player2.name %> has won! </figcaption>
+             <% elsif @game.player2.votes == 0 %> <figcaption> <%= @game.player1.name %> has won! </figcaption>
                 <% end %>
              </form>
         </div>
@@ -44,5 +46,13 @@ input[type=submit] {
 
 input[type=submit]:hover {
     background-color: #45a049;
+}
+
+#text_bottom {
+  position: absolute;
+  bottom: 100px;
+  width:100%;
+  margin:0;
+  auto;
 }
 </style>

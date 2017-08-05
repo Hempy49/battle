@@ -1,3 +1,3 @@
 # Battle
 
-Makers Acadmey group project.
+Makers Academy group project to build a two player battle web app game.
